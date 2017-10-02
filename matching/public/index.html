@@ -8,6 +8,31 @@
     <script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/core.js"></script>
     <link type = "text/css" rel = "stylesheet" href = "style.css"></link>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <style>
+    header {
+position: fixed;
+top: 0px;
+left: 0px;
+height: 30px;
+width: 100%;
+color: darkgreen;
+background-color: khaki;
+}
+
+body {
+background-color: powderblue;
+}
+
+img {
+height: 140px;
+width: 140px; 
+margin: 5px; 
+}
+#group{
+    width: 160px;
+}
+    
+    </style>
 </head>
 <body>
     <script type ="text/javascript" src = "match.js"></script>
@@ -21,7 +46,6 @@
         <div class = "row">
             <div class = "col-3">
                 <br><br>
-                <p> width = 3 </p>
                 
                     <p class="question">1. What is the answer to this question?</p>
                     <ul class="answers">
@@ -35,61 +59,48 @@
             </div>
             <div class = "col-9">
                 <br><br>
-                <p> width = 9 </p>
-                <p> image grid here (3x3) </p>
                 <div class = "row">
                     <br><br>
                     <div class = "col-3">
-                        <p> roo </p>
-                        <img src="images/roo_small.jpg" alt="roo" >
+                        <img src="https://i.pinimg.com/originals/27/7e/4e/277e4e7c6c1c0d2d927d68289e6eb8d7.jpg" alt="roo" >
                     </div>
                     <div class = "col-3">
-                        <p> pooh </p>
-                        <img src="images/winniepooh_medium.jpg" alt="pooh" >
+                        <img src="https://i.pinimg.com/736x/c7/2c/a6/c72ca6b569e9729191b465dba7dda209--winnie-the-pooh-characters-baby-winnie-the-pooh.jpg" alt="pooh" >
                     </div>
                     <div class = "col-3">
-                        <p> piglet </p>
-                        <img src="images/piglet_medium.jpg" alt="piglet" >
+                        <img src="https://i.pinimg.com/236x/34/26/40/3426408bef51dd28a6cddc60cdc4f908--pooh-bear-piglets.jpg" alt="piglet" >
                     </div>
                 </div>
                 <div class = "row">
                         <div class = "col-3">
-                            <p> tigger </p>
-                            <img src="images/tigger_medium_img.jpg" alt="tigger" >
+                            <img src="https://i.pinimg.com/736x/18/5a/f3/185af332413c536fe97b61249628f525--inspirational-blogs-chromebook.jpg" alt="tigger" >
                         </div>
                         <div class = "col-3">
-                            <p> grid </p>
-                            <img src="images/graph-axes-blank.gif" alt="grid" >
+                            <img src="https://cdn.tutsplus.com/active/uploads/legacy/tuts/275_vectors/tutorial/CartesianSystem.png" alt="grid" >
                         </div>
                         <div class = "col-3">
-                            <p> eeyore </p>
-                            <img src="images/eeyore_large.jpg" alt="eeyore" >
+                            <img src="https://i.pinimg.com/736x/08/11/f7/0811f7de1614025d156e484a2bf95ef3--eeyore-piglets.jpg" alt="eeyore" >
                         </div>
                 </div>
                 <div class = "row">
                         <div class = "col-3">
-                            <p> kanga </p>
-                            <img src="images/kanga_roo_medium.gif" alt="kanga" >
+                            <img src="https://i.pinimg.com/736x/6f/16/34/6f1634686805fb79019bf911945d4042--file.jpg" alt="kanga" >
                         </div>
                         <div class = "col-3">
-                                <p> rabbit </p>
-                                <img src="images/rabbit_med.jpg" alt="rabbit" >
+                                <img src="https://i.pinimg.com/originals/eb/46/78/eb4678be7c317a8b7f77228f7247fa3e.jpg" alt="rabbit" >
                         </div>
                         <div class = "col-3">
-                            <p> owl </p>
-                            <img src="images/Owl_medium.jpg" alt="owl" >
+                            <img src="https://i.pinimg.com/originals/b9/82/36/b982365fb5493dd2db0ba3d4dfd558c0.jpg" alt="owl" >
                         </div>
                 </div>
 
                 <div class = "row">
                     <div class = "col-6">
-                        <p> width = 6 </p>
                         <p> display match </p>
                     </div>
                     <div class = "col-3">
-                        <p> width = 3 </p>
                         <p> group image </p>
-                        <img src="images/thegroup_medium.jpg" alt="group" id ="group">
+                        <img src="https://wh1k8zidop.inscname.net/games/images/1461691366_Winnie_the_Pooh_Picture_Click" alt="group" id ="group">
                     </div>
 
                 </div>
@@ -100,7 +111,45 @@
   var cat1 = ($("input[@name=q1]:checked").val() != "a");
 
 var cat2 = ($("input[@name=q2]:checked").val() != "b");
-  
+$(document).ready(function(){
+
+    //read in data and evaluate matches by the 
+    // following process:
+    //part 0:  define characters by grid position
+    // (done in characters.js)
+
+    //part 1:  define question and answer objects
+    // (questions.js is set up for this)
+
+    //part 2:  loop through the questions and quantify
+    // the answers in (x,y)format (answers.js is created 
+    // for this purpose)
+    //  route/apipaths.js sets up the routes to each of
+    // these files
+
+    // htmlpaths.js is set up to launch index.html "/"
+
+    for (var k=0; k<questions.length; k++){
+
+    }
+
+    // part 3:  average the x & y values
+
+    function average(){
+
+    }
+
+    // part 4:  use the distance formula from avg to each
+    // character.  then find the minimum value. 
+
+    function distance(){
+
+    }
+})
+
+
+
+
   </script>
 </body>
 </html>

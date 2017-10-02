@@ -22,6 +22,15 @@
             <div class = "col-3">
                 <br><br>
                 <p> width = 3 </p>
+                
+                    <p class="question">1. What is the answer to this question?</p>
+                    <ul class="answers">
+                    <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">Answer 1</label><br/>
+                    <input type="radio" name="q1" value="b" id="q1b"><label for="q1b">Answer 2</label><br/>
+                    <input type="radio" name="q1" value="c" id="q1c"><label for="q1c">Answer 3</label><br/>
+                    <input type="radio" name="q1" value="d" id="q1d"><label for="q1d">Answer 4</label><br/>
+                    </ul>
+                 
                 <p> questions </p>
             </div>
             <div class = "col-9">
@@ -87,6 +96,11 @@
             </div>
         </div>
     </div>
+  <script>
+  var cat1 = ($("input[@name=q1]:checked").val() != "a");
+
+var cat2 = ($("input[@name=q2]:checked").val() != "b");
   
+  </script>
 </body>
 </html>

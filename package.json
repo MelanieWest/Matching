@@ -1,0 +1,24 @@
+{
+  "name": "match",
+  "version": "1.0.0",
+  "description": "matches a person's self-identified traits with a familiar character",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MelanieWest/Matching.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MelanieWest/Matching/issues"
+  },
+  "homepage": "https://github.com/MelanieWest/Matching#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.1",
+    "path": "^0.12.7"
+  }
+}

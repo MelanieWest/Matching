@@ -1,8 +1,8 @@
 var characters =[
     {
         name: "Roo",
-        xvalue: -1,
-        yvalue: 1
+        xvalue: -1.4,
+        yvalue: 1.4
     },
     {
         name: "Pooh Bear",
@@ -11,8 +11,8 @@ var characters =[
     },
     {
         name: "Piglet",
-        xvalue: 1,
-        yvalue: 1
+        xvalue: 1.4,
+        yvalue: 1.4
     },
     {
         name: "Tigger",
@@ -26,8 +26,8 @@ var characters =[
     },
     {
         name: "Kanga",
-        xvalue: -1,
-        yvalue: -1
+        xvalue: -1.4,
+        yvalue: -1.4
     },
     {
         name: "Rabbit",
@@ -36,7 +36,7 @@ var characters =[
     },
     {
         name: "Owl",
-        xvalue: 1,
-        yvalue: -1
+        xvalue: 1.4,
+        yvalue: -1.4
     }
 ];

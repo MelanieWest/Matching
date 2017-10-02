@@ -29,7 +29,8 @@ width: 140px;
 margin: 5px; 
 }
 #group{
-    width: 160px;
+    height: 200px;
+    width: 250px;
 }
     
     </style>
@@ -47,15 +48,15 @@ margin: 5px;
             <div class = "col-3">
                 <br><br>
                 
-                    <p class="question">1. What is the answer to this question?</p>
+                    <p id="query">Question: </p>
                     <ul class="answers">
-                    <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">Answer 1</label><br/>
-                    <input type="radio" name="q1" value="b" id="q1b"><label for="q1b">Answer 2</label><br/>
-                    <input type="radio" name="q1" value="c" id="q1c"><label for="q1c">Answer 3</label><br/>
-                    <input type="radio" name="q1" value="d" id="q1d"><label for="q1d">Answer 4</label><br/>
+                    <input type="radio" name="q1" value="2" id="q1a"><label for="q1a">Strongly Agree</label><br/>
+                    <input type="radio" name="q1" value="1" id="q1b"><label for="q1b">Agree</label><br/>
+                    <input type="radio" name="q1" value="0" id="q1c"><label for="q1c">Neutral</label><br/>
+                    <input type="radio" name="q1" value="-1" id="q1d"><label for="q1d">Disagree</label><br/>
+                    <input type="radio" name="q1" value="-2" id="q1d"><label for="q1d">Strongly Disagree</label><br/>
                     </ul>
                  
-                <p> questions </p>
             </div>
             <div class = "col-9">
                 <br><br>
@@ -95,11 +96,10 @@ margin: 5px;
                 </div>
 
                 <div class = "row">
-                    <div class = "col-6">
-                        <p> display match </p>
+                    <div class = "col-6" id = "match">
+
                     </div>
                     <div class = "col-3">
-                        <p> group image </p>
                         <img src="https://wh1k8zidop.inscname.net/games/images/1461691366_Winnie_the_Pooh_Picture_Click" alt="group" id ="group">
                     </div>
 
@@ -128,10 +128,37 @@ $(document).ready(function(){
     // these files
 
     // htmlpaths.js is set up to launch index.html "/"
+    function questionAsk() {
 
-    for (var k=0; k<questions.length; k++){
+      // Here we get the location of the root page.
+      // We use this instead of explicitly saying the URL is localhost:3001 because the url will change when we deploy.
+      var currentURL = window.location.origin;
 
-    }
+    $.ajax({ url: currentURL + "/api/quest", method: "GET" })
+    .done(function(questions) {
+
+      // Here we are logging the URL so we have access to it for troubleshooting
+      console.log("------------------------------------");
+      console.log("URL: " + currentURL + "/api/quest");
+      console.log("------------------------------------");
+
+      // Here we then log the NYTData to console, where it will show up as an object.
+      console.log(questions);
+      console.log("------------------------------------");
+
+      // Loop through and display each of the customers
+      for (var i = 0; i < questions.length; i++) {
+
+        // Create the HTML Well (Section) and Add the table content for each reserved table
+     
+        $("#query").html(questions[i]);
+
+
+      }
+    });
+  }
+
+  questionAsk();
 
     // part 3:  average the x & y values
 

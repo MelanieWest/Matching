@@ -40,3 +40,5 @@ var characters =[
         yvalue: -1.4
     }
 ];
+
+module.exports = characters;

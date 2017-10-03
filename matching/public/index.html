@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Matching</title>
     <script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/core.js"></script>
-    <link type = "text/css" rel = "stylesheet" href = "style.css"></link>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <style>
     header {
@@ -36,8 +35,7 @@ margin: 5px;
     </style>
 </head>
 <body>
-    <script type ="text/javascript" src = "match.js"></script>
-    <div 
+ 
     <div class = "container">
         <div class = "row justify-content-md-center">
             <div class = "col-12">
@@ -52,18 +50,93 @@ margin: 5px;
         <div class="panel panel-default">
             <div class="panel-heading">
               <h3 class="panel-title">Character Match</h3>
-            </div>
+    
+                  
+                <h4> 1. I like hard work</h4>
+                <select data-placeholder="" class="chosen-select" id="q1">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2  (Disagree)</option>
+                    <option value="3">3 (Neutral)</option>
+                    <option value="4">4  (Agree) </option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h4> 2. A nap can solve any problem </h4>
+                <select data-placeholder="" class="chosen-select" id="q2">
+                        <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2 (Disagree)</option>
+                    <option value="3">3 (Neutral)</option>
+                    <option value="4">4 (Agree)</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            <h4> 3. I bring the party with me </h4>
+            <select data-placeholder="" class="chosen-select" id="q3">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2 (Disagree)</option>
+                <option value="3">3 (Neutral)</option>
+                <option value="4">4 (Agree)</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h4> 4.  Life is too short to do everything I want to do </h4>
+            <select data-placeholder="" class="chosen-select" id="q4">
+                    <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2 (Disagree)</option>
+                <option value="3">3 (Neutral)</option>
+                <option value="4">4 (Agree)</option>
+                <option value="5">5 (Strongly Agree)</option>
+                </select>                         
+           
+                <h4> 5. I think it's important to plan ahead </h4>
+                <select data-placeholder="" class="chosen-select" id="q5">
+                        <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2 (Disagree)</option>
+                    <option value="3">3 (Neutral)</option>
+                    <option value="4">4 (Agree)</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h4> 6. I'm more of a hunter-gatherer than a farmer </h4>
+                <select data-placeholder="" class="chosen-select" id="q6">
+                        <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2 (Disagree)</option>
+                    <option value="3">3 (Neutral)</option>
+                    <option value="4">4 (Agree)</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h4> 7. I hope for the best but expect the worst </h4>
+                <select data-placeholder="" class="chosen-select" id="q7">
+                        <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2 (Disagree)</option>
+                    <option value="3">3 (Neutral)</option>
+                    <option value="4">4 (Agree)</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h4> 8.  Life is a constant struggle </h4>
+                <select data-placeholder="" class="chosen-select" id="q8">
+                        <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2 (Disagree)</option>
+                    <option value="3">3 (Neutral)</option>
+                    <option value="4">4 (Agree)</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>               
+                <button type="button" class="btn btn-danger btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+                Submit Responses</button>
+
+            
             <div class="panel-body" id="query">
+
+            </div>
+
             </div>
           </div>
 
-                    <ul class="answers">
-                    <input type="radio" name="q1" value="2" id="q1a"><label for="q1a">Strongly Agree</label><br/>
-                    <input type="radio" name="q1" value="1" id="q1b"><label for="q1b">Agree</label><br/>
-                    <input type="radio" name="q1" value="0" id="q1c"><label for="q1c">Neutral</label><br/>
-                    <input type="radio" name="q1" value="-1" id="q1d"><label for="q1d">Disagree</label><br/>
-                    <input type="radio" name="q1" value="-2" id="q1d"><label for="q1d">Strongly Disagree</label><br/>
-                    </ul>
                  
             </div>
             <div class = "col-9">
@@ -108,7 +181,6 @@ margin: 5px;
 
                     </div>
                     <div class = "col-3">
-                        <img src="https://wh1k8zidop.inscname.net/games/images/1461691366_Winnie_the_Pooh_Picture_Click" alt="group" id ="group">
                     </div>
 
                 </div>
@@ -116,9 +188,7 @@ margin: 5px;
         </div>
     </div>
   <script>
-  var cat1 = ($("input[@name=q1]:checked").val() != "a");
-
-var cat2 = ($("input[@name=q2]:checked").val() != "b");
+;
 $(document).ready(function(){
 
     //read in data and evaluate matches by the 
@@ -126,20 +196,25 @@ $(document).ready(function(){
     //part 0:  define characters by grid position
     // (done in characters.js)
 
-    //part 1:  define question and answer objects
+    //part 1:  define questions 
     // (questions.js is set up for this)
 
     //part 2:  loop through the questions and quantify
-    // the answers in (x,y)format (answers.js is created 
-    // for this purpose)
+    // the answers in (x,y)format
+
+    //method: answers 1,2,5 and 6 determine vertical placement;
+    // answers 3,4,7 and 8 determine horizontal placement
+
     //  route/apipaths.js sets up the routes to each of
     // these files
 
     // htmlpaths.js is set up to launch index.html "/"
+    // and the path to match.html is "/match" where the
+    //match is posted
+
     function questionAsk() {
 
-      // Here we get the location of the root page.
-      // We use this instead of explicitly saying the URL is localhost:3001 because the url will change when we deploy.
+  
       var currentURL = window.location.origin;
 
     $.ajax({ url: currentURL + "/api/quest", method: "GET" })
@@ -156,7 +231,6 @@ $(document).ready(function(){
 
       for (var i = 0; i < questions.length; i++) {
         
-                  // Create the HTML Well (Section) and Add the table content for each reserved table
                   var queryDiv = $("<div>");
                   queryDiv.addClass("well");
                   queryDiv.attr("id", "questwell-" + i + 1);
@@ -173,11 +247,26 @@ $(document).ready(function(){
 
   questionAsk();
 
-    // part 3:  average the x & y values
+    // part 3:  average the x & y values()
+    $("#submit").on("click",function(){
+        var responses = [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(),]
+ 
+        var x2 = parseInt($("#q2").val())-3;
+        var x6 = parseInt($("#q6").val())-3;
+        var x1 = 3- parseInt($("#q1").val());
+        var x5 = 3- parseInt($("#q5").val());
 
-    function average(){
+        var xVal = (x1+x2+x5+x6)/4.0;       //average the x-values
 
-    }
+        var y7 = parseInt($("#q7").val())-3;
+        var y8 = parseInt($("#q8").val())-3;
+        var y3 = 3- parseInt($("#q3").val());
+        var y4 = 3- parseInt($("#q4").val());
+
+        var yVal = (y3+y4+y7+y8)/4.0;       //average the y-values
+        console.log("(x,y) ="+xVal+','+yVal);
+    });
+  
 
     // part 4:  use the distance formula from avg to each
     // character.  then find the minimum value. 

@@ -1,43 +1,37 @@
 var characters =[
     {
         name: "Roo",
-        xvalue: -1.4,
-        yvalue: 1.4
+        answers:["1","5","4","4","1","5","3","3"]  
     },
     {
         name: "Pooh Bear",
-        xvalue: 0,
-        yvalue: 2
+        answers:["1","5","3","3","1","5","3","3"]  
     },
     {
         name: "Piglet",
-        xvalue: 1.4,
-        yvalue: 1.4
+        answers:["1","5","3","4","4","5","3","3"]       
     },
     {
         name: "Tigger",
-        xvalue: -2,
-        yvalue: 0
+        answers:["3","3","5","5","3","3","1","1"]  
+        
     },
     {
         name: "Eeyore",
-        xvalue: 2,
-        yvalue: 0
+        answers:["3","3","1","1","3","3","5","5"]  
+        
     },
     {
         name: "Kanga",
-        xvalue: -1.4,
-        yvalue: -1.4
+        answers:["5","1","4","4","5","1","3","3"]          
     },
     {
         name: "Rabbit",
-        xvalue: 0,
-        yvalue: -2
+        answers:["5","1","3","3","5","1","3","3"]          
     },
     {
         name: "Owl",
-        xvalue: 1.4,
-        yvalue: -1.4
+        answers:["5","1","3","3","5","1","4","4"]          
     }
 ];
 

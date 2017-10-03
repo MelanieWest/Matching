@@ -252,22 +252,41 @@ $(document).ready(function(){
     // Values range from -2 to +2 on the x & y axes
 
     $("#submit").on("click",function(){
-        var responses = [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(),]
- 
-        var x2 = parseInt($("#q2").val())-3;
-        var x6 = parseInt($("#q6").val())-3;
-        var x1 = 3- parseInt($("#q1").val());
-        var x5 = 3- parseInt($("#q5").val());
+        var responses = [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(),];
 
-        var xVal = (x1+x2+x5+x6)/4.0;       //average the x-values
+     $.ajax({ url: currentURL + "/api/char", method: "GET" })
+        .done(function(characters) {
+c
+        //compare character responses to submitted responses
+        
+        var diff = [];
+        var dist =0;
+        for (var i=0; i<characters.length; i++){
+            console.log('i ='+i);
+            diff.push(0);   //set next array item = 0
+            for (var j=0; j<characters.answers.length; j++){
+                console.log('j ='+j);
+                dist = Math.abs(responses[j]-characters.answers[j]);
+                diff[i] +=dist;
+            }
+            console.log( 'diff[i] =',diff[i]);
+        }
+        var smallest = Math.min(...diff);
 
-        var y7 = parseInt($("#q7").val())-3;
-        var y8 = parseInt($("#q8").val())-3;
-        var y3 = 3- parseInt($("#q3").val());
-        var y4 = 3- parseInt($("#q4").val());
+        // var x2 = parseInt($("#q2").val())-3;
+        // var x6 = parseInt($("#q6").val())-3;
+        // var x1 = 3- parseInt($("#q1").val());
+        // var x5 = 3- parseInt($("#q5").val());
 
-        var yVal = (y3+y4+y7+y8)/4.0;       //average the y-values
-        console.log("(x,y) ="+xVal+','+yVal);
+        // var xVal = (x1+x2+x5+x6)/4.0;       //average the x-values
+
+        // var y7 = parseInt($("#q7").val())-3;
+        // var y8 = parseInt($("#q8").val())-3;
+        // var y3 = 3- parseInt($("#q3").val());
+        // var y4 = 3- parseInt($("#q4").val());
+
+        // var yVal = (y3+y4+y7+y8)/4.0;       //average the y-values
+        // console.log("(x,y) ="+xVal+','+yVal);
     });
   
 

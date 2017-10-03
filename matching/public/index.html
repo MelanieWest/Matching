@@ -199,14 +199,14 @@ $(document).ready(function(){
     //part 1:  define questions 
     // (questions.js is set up for this)
 
+    //  route/apipaths.js sets up the routes to each of
+    // these files
+
     //part 2:  loop through the questions and quantify
     // the answers in (x,y)format
 
     //method: answers 1,2,5 and 6 determine vertical placement;
     // answers 3,4,7 and 8 determine horizontal placement
-
-    //  route/apipaths.js sets up the routes to each of
-    // these files
 
     // htmlpaths.js is set up to launch index.html "/"
     // and the path to match.html is "/match" where the
@@ -231,23 +231,26 @@ $(document).ready(function(){
 
       for (var i = 0; i < questions.length; i++) {
         
-                  var queryDiv = $("<div>");
-                  queryDiv.addClass("well");
-                  queryDiv.attr("id", "questwell-" + i + 1);
-                  $("#query").append(queryDiv);
-        
-                  var queryNum = i + 1;
-        
-        
-                  // Then display the remaining fields in the HTML (Section Name, Date, URL)
-                  $("#questwell-" + i + 1).append("<h2><span class='label label-primary'>" + queryNum + "</span> | " + questions[i] + "</h2>");
-                }
+            var queryDiv = $("<div>");
+            queryDiv.addClass("well");
+            queryDiv.attr("id", "questwell-" + i + 1);
+            $("#query").append(queryDiv);
+
+            var queryNum = i + 1;
+
+
+            // Then display the remaining fields in the HTML (Section Name, Date, URL)
+            $("#questwell-" + i + 1).append("<h2><span class='label label-primary'>" + queryNum + "</span> | " + questions[i] + "</h2>");
+        }
     });
   }
 
   questionAsk();
 
-    // part 3:  average the x & y values()
+    // part 3:  average the x & y values(),(after adjusting
+    // them to match character locations on the grid shown)
+    // Values range from -2 to +2 on the x & y axes
+
     $("#submit").on("click",function(){
         var responses = [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(),]
  

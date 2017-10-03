@@ -48,7 +48,15 @@ margin: 5px;
             <div class = "col-3">
                 <br><br>
                 
-                    <p id="query">Question: </p>
+                        <!-- Current Tables in Use -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Character Match</h3>
+            </div>
+            <div class="panel-body" id="query">
+            </div>
+          </div>
+
                     <ul class="answers">
                     <input type="radio" name="q1" value="2" id="q1a"><label for="q1a">Strongly Agree</label><br/>
                     <input type="radio" name="q1" value="1" id="q1b"><label for="q1b">Agree</label><br/>
@@ -146,15 +154,20 @@ $(document).ready(function(){
       console.log(questions);
       console.log("------------------------------------");
 
-      // Loop through and display each of the customers
       for (var i = 0; i < questions.length; i++) {
-
-        // Create the HTML Well (Section) and Add the table content for each reserved table
-     
-        $("#query").html(questions[i]);
-
-
-      }
+        
+                  // Create the HTML Well (Section) and Add the table content for each reserved table
+                  var queryDiv = $("<div>");
+                  queryDiv.addClass("well");
+                  queryDiv.attr("id", "questwell-" + i + 1);
+                  $("#query").append(queryDiv);
+        
+                  var queryNum = i + 1;
+        
+        
+                  // Then display the remaining fields in the HTML (Section Name, Date, URL)
+                  $("#questwell-" + i + 1).append("<h2><span class='label label-primary'>" + queryNum + "</span> | " + questions[i] + "</h2>");
+                }
     });
   }
 

@@ -14,9 +14,9 @@ module.exports = function(app){
 
     //the next two 'get' actions retrieve the stored data
 
-app.get("/api/ans", function(req, res){
-  res.json(answerArray);
-}); 
+// app.get("/api/ans", function(req, res){
+//   res.json(answerArray);
+// }); 
 
 app.get("/api/char", function(req, res){
   res.json(char);

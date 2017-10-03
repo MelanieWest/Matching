@@ -22,19 +22,16 @@ app.get("/api/char", function(req, res){
   res.json(char);
 });
 
-app.get("/api/quest",function(req,res){
-    res.json(quest);
-})
 
  // req = data received (request);
  // res = data being returned (response)
 
- app.post("/api/ans",function(req,res){
+ //should this be 'get' or 'post'?
+ 
+ app.get("/api/ans",function(req,res){
    //send answers to the array
-
        answerArray.push(req.body);
-  
- });
+   });
 
 
 }   //end of module.exports
